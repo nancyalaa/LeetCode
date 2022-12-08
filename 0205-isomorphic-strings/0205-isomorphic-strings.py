@@ -10,7 +10,6 @@ class Solution:
                     continue
                 else:
                     return False
-        for i in range(len(t)):
             if t[i] not in tMaps.keys():
                 tMaps[t[i]] = s[i]
             else:
