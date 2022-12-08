@@ -7,7 +7,7 @@ class Solution:
             if flowerbed[i] == 0 and flowerbed[i-1] == 0 and flowerbed[i+1] == 0:
                     counter += 1
                     flowerbed[i] = 1
-                    
+                    i += 1
                     
         if counter >= n:
             return True
