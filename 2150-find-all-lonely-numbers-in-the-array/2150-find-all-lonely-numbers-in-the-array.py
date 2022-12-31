@@ -3,7 +3,7 @@ class Solution:
         numsCount = Counter(nums)
         output = []
         for num in numsCount:
-            if numsCount[num] == 1 and numsCount[num-1] + numsCount[num+1] == 0 :
+            if numsCount[num] == 1 and numsCount[num-1] == 0 and numsCount[num+1] == 0:
                 output.append(num)
         return output
         
