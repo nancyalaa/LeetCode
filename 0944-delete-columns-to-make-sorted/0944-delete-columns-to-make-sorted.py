@@ -1,12 +1,10 @@
 class Solution:
     def minDeletionSize(self, strs: List[str]) -> int:
-        numberOfCols = 0
-        for col in range(len(strs[0])):
-            for row in range(1,len(strs)):
-                if strs[row][col] < strs[row-1][col]:
-                    numberOfCols += 1
-                    break
-        return numberOfCols
+        output = 0
+        for row in zip(*strs):
+            if list(row)!=sorted(row):
+                output+=1
+        return output 
         
             
                 
