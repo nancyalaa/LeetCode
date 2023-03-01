@@ -1,10 +1,9 @@
 class Solution:
     def triangularSum(self, nums: List[int]) -> int:
-        ln = len(nums)
-        while ln > 0:
-            for i in range(ln-1):
+        while len(nums) > 1:
+            for i in range(len(nums)-1):
                 nums[i] = (nums[i] + nums[i+1]) % 10
-            ln -= 1
+            nums.pop()
         return nums[0]
             
         
