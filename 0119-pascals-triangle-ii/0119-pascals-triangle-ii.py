@@ -8,7 +8,6 @@ class Solution:
                     temp.append(rows[idx+1][n]+rows[idx+1][n+1])
                 temp.append(1)
                 rows.append(temp)
-                print(rows)
         return rows[rowIndex]
              
         
